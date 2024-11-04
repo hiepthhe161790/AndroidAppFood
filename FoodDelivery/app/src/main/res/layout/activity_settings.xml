@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setting_Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title for Settings Screen -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="24dp"
+            android:text="Settings"
+            android:textAppearance="@style/SettingsTitle" />
+
+        <!-- Button to view Order History -->
+        <Button
+            android:id="@+id/btnOrderHistory"
+            style="@style/SettingsButton"
+            android:text="Order History" />
+
+        <!-- Button to open Google Maps -->
+        <Button
+            android:id="@+id/btnGoogleMaps"
+            style="@style/SettingsButton"
+            android:text="View Location on Google Maps" />
+
+        <!-- Button to access Support -->
+        <Button
+            android:id="@+id/btnSupport"
+            style="@style/SettingsButton"
+            android:text="Customer Support" />
+
+        <!-- Button to log out -->
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/SettingsButtonWarning"
+            android:text="Log Out" />
+
+        <!-- Button for About Us -->
+        <Button
+            android:id="@+id/btnAbout"
+            style="@style/SettingsButton"
+            android:text="About Us" />
+
+    </LinearLayout>
+</ScrollView>

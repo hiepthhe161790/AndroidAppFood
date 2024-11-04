@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Food Delivery</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="activity_levels">
+        <item>Sedentary (little to no exercise)</item>
+        <item>Lightly active (light exercise)</item>
+        <item>Moderately active (moderate exercise)</item>
+        <item>Very active (hard exercise)</item>
+        <item>Super active (hard exercise and physical job)</item>
+    </string-array>
+</resources>

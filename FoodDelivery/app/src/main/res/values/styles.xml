@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Title Style for the Settings Screen -->
+    <style name="SettingsTitle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Base Style for Settings Buttons -->
+    <style name="SettingsButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Warning Button Style (e.g., for Logout) -->
+    <style name="SettingsButtonWarning" parent="SettingsButton">
+        <item name="android:backgroundTint">#E57373</item> <!-- Red tint for warnings -->
+    </style>
+</resources>

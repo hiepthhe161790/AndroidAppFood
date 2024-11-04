@@ -1,0 +1,191 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.edu.fpt.fooddelivery.ProfileActivity">
+
+    <!-- Personal Info Section -->
+    <TextView
+        android:id="@+id/textViewPersonalInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Personal Information"
+        android:textColor="#ff3d00"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        app:layout_constraintTop_toBottomOf="@id/textViewPersonalInfoTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <!-- TextView to display default address -->
+    <TextView
+        android:id="@+id/tvDefaultAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Default Address: Not Set"
+        android:textStyle="italic"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDefaultAddress">
+
+        <Button
+            android:id="@+id/buttonSetHomeDefault"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Home"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonSetWorkDefault"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Work"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonSetOtherDefault"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Other"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonSavePersonalInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Personal Info"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <!-- Address Section -->
+    <TextView
+        android:id="@+id/textViewAddressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Addresses"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/buttonSavePersonalInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/buttonAddHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Home Address"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddressTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/addressHomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Home Address:"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/buttonAddWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Work Address"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/addressHomeText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/addressWorkText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Work Address:"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddWork"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/buttonAddOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Other Address"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/addressWorkText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/addressOtherText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Other Address:"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddOther"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
